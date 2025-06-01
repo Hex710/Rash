@@ -112,16 +112,17 @@ int hashExclude(struct hNo **t1, struct hNo **t2, int k)
 
     if ((t2[indice]->valor == k) && (t2[indice]->status == 1))
     {
-        t2[indice]->status == 0;
+        t2[indice]->status = 0;
 
         return 0;
     }
     else if ((t1[indice]->valor == k) && (t1[indice]->status == 1))
     {
-        t1[indice]->status == 0;
+        t1[indice]->status = 0;
 
         return 0;
     }
+    return -3;
 }
 
 int hashPrint(struct hNo **t1, struct hNo **t2)
